@@ -1,0 +1,5 @@
+header > h1 {
+    margin: 0;
+    padding-block: 0.5rem;
+    padding-inline: 1.5rem;
+}
