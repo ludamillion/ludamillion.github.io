@@ -1,13 +1,20 @@
-header > h1 {
+* {
+    --fg: hsl(0, 0, 0, 1);
+}
+
+.content-layer > header {
     margin: 0;
-    padding-block: 0.5rem;
-    padding-inline: 1.5rem;
+    /* padding-block: 0.5rem; */
+    /* padding-inline: 1.5rem; */
 }
 
 .body {
     display: grid;
     height: 100vh;
     width: 100vw;
+
+    color: var(--fg);
+    background-color: hsl(0deg 0% 95%);
 
     grid-template-rows: [header-start] max-content [header-end main-start] 1fr [main-end];
     grid-template-columns: [page-start] 100% [page-end];
@@ -22,10 +29,32 @@ main {
 
     display: grid;
     place-items: center;
+
+    grid-template-columns:
+        [left-gutter-start] 10vw
+        [left-gutter-end page-content-start] 80vw
+        [page-content-end right-gutter-start] 10vw
+        [right-gutter-end];
+
 }
 
 .content-layer {
-    width: 50%;
+    /* margin-inline: 10vw; */
+    grid-column: page-content;
+}
+
+.bio-tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    /* gap: 1.2rem; */
+}
+
+.bio-tag:not(:last-of-type)::after {
+    content: '\002BCC';
+    padding-inline: 0.5rem;
+
+    color: hsl(0deg 0% 50% / 100%);
 }
 
 svg.background,
