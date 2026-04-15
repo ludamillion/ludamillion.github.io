@@ -1,75 +1,113 @@
+@layer base, surface, state;
+
+@import url("reset.css") layer(base);
+
 * {
-    --fg: hsl(0, 0, 0, 1);
+  --fg: hsl(0, 0, 0, 1);
+}
+
+body {
+  font-size: 18px;
+}
+
+.content-layer {
+  display: grid;
+
+  place-content: center;
+  gap: 0.5rem;
+
+  grid-template-rows: repeat(3, auto);
+  grid-auto-columns: 1fr;
 }
 
 .content-layer > header {
-    margin: 0;
-    /* padding-block: 0.5rem; */
-    /* padding-inline: 1.5rem; */
+  line-height: 1;
+}
+
+.content-layer > * {
+  display: grid;
+  place-content: center;
+}
+
+.find-me-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.find-me-link {
+  display: grid;
+  place-content: center;
+
+  img {
+    height: 2em;
+    aspect-ratio: 1/1;
+  }
 }
 
 .body {
-    display: grid;
-    height: 100vh;
-    width: 100vw;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
 
-    color: var(--fg);
-    background-color: hsl(0deg 0% 95%);
+  margin: 0;
 
-    grid-template-rows: [header-start] max-content [header-end main-start] 1fr [main-end];
-    grid-template-columns: [page-start] 100% [page-end];
+  color: var(--fg);
+  background-color: hsl(0deg 0% 95%);
+
+  grid-template-rows: [header-start] max-content [header-end main-start] 1fr [main-end];
+  grid-template-columns: [page-start] 100% [page-end];
 }
 
-header {
-    grid-area: header/page;
-}
+/* header { */
+/*   grid-area: header/page; */
+/* } */
+/**/
 
 main {
-    grid-area: main/page;
+  grid-area: main/page;
 
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 
-    grid-template-columns:
-        [left-gutter-start] 10vw
-        [left-gutter-end page-content-start] 80vw
-        [page-content-end right-gutter-start] 10vw
-        [right-gutter-end];
+  grid-template-columns:
+    [left-gutter-start] 10vw
+    [left-gutter-end page-content-start] 80vw
+    [page-content-end right-gutter-start] 10vw
+    [right-gutter-end];
 
 }
 
 .content-layer {
-    /* margin-inline: 10vw; */
-    grid-column: page-content;
+  grid-column: page-content;
 }
 
 .bio-tags {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    /* gap: 1.2rem; */
+  padding: 0;
+  display: flex;
+
+  margin-block: 0;
 }
 
 .bio-tag:not(:last-of-type)::after {
-    content: '\002BCC';
-    padding-inline: 0.5rem;
+  content: '\002BCC';
+  padding-inline: 0.5rem;
 
-    color: hsl(0deg 0% 50% / 100%);
+  color: hsl(0deg 0% 50% / 100%);
 }
 
-svg.background,
-svg.foreground {
-    height: 100%;
-    width: 100%;
-    grid-area: header-start/page-start/main-end/page-end;
-}
-
-svg.background > circle {
-    fill: hsl(from var(--color-cerulean-2) h s l / 0.5);
-    stroke: none;
-}
-
-svg.foreground > circle {
-    fill: hsl(from var(--color-rose-2) h s l / 0.5);
-    stroke: none;
-}
+/* svg.background, */
+/* svg.foreground { */
+/*     height: 100%; */
+/*     width: 100%; */
+/*     grid-area: header-start/page-start/main-end/page-end; */
+/* } */
+/**/
+/* svg.background > circle { */
+/*     fill: hsl(from var(--color-cerulean-2) h s l / 0.5); */
+/*     stroke: none; */
+/* } */
+/**/
+/* svg.foreground > circle { */
+/*     fill: hsl(from var(--color-rose-2) h s l / 0.5); */
+/*     stroke: none; */
+/* } */

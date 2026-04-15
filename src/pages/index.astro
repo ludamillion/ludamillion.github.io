@@ -4,31 +4,39 @@ import "../styles/index.css";
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/reasonable-colors@0.4.0/reasonable-colors-hsl.css">
-        <title>Ludamillion.Dev - Home</title>
-    </head>
-    <body class="body">
-      <!-- <svg class="background" viewBox="0 0 100 100"> -->
-        <!--     <circle cx="40" cy="50" r="15" /> -->
-        <!-- </svg> -->
-      <main>
-        <div class="content-layer">
-          <header class="fluid-h1">Luke D. Inglis</header>
-          <ul class="bio-tags">
-            <li class="bio-tag">Accessibility Advocate</li>
-            <li class="bio-tag">Bitwright</li>
-            <li class="bio-tag">Creative Thinker</li>
-            <li class="bio-tag">Nice Person</li>
-          </ul>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/reasonable-colors@0.4.0/reasonable-colors-hsl.css">
+    <title>Ludamillion.Dev - Home</title>
+  </head>
+  <body class="body">
+    <!-- <svg class="background" viewBox="0 0 100 100"> -->
+    <!--     <circle cx="40" cy="50" r="15" /> -->
+    <!-- </svg> -->
+    <main>
+      <div class="content-layer">
+        <header class="fluid-h1">
+          <span class="name-tag">Luke D. Inglis</span>
+        </header>
+
+        <ul class="bio-tags" role="list">
+          <li class="bio-tag">Software Engineer</li>
+          <li class="bio-tag">Fullstack Developer</li>
+          <li class="bio-tag">Accessibility Advocate</li>
+          <li class="bio-tag">Nice Person</li>
+        </ul>
+
+        <div class="find-me-links">
+          <a class="find-me-link"><img src="github.svg"/></a>
+          <a class="find-me-link"><img src="linkedin.svg"/></a>
         </div>
-      </main>
-    </body>
+      </div>
+    </main>
+  </body>
 </html>
