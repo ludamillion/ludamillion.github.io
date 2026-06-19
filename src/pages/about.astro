@@ -1,11 +1,9 @@
 ---
 import "../styles/global.css";
-import Navigation from '../components/Navigation.astro';
-import SocialLinks from '../components/SocialLinks.astro';
+import Navigation from "../components/Navigation.astro";
 
-const pageTitle = 'Home'
+const pageTitle = 'About Me'
 ---
-
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -19,23 +17,15 @@ const pageTitle = 'Home'
         <title>{pageTitle} - Ludamillion.Dev</title>
     </head>
     <body class="body">
-        <header class="site-header">
-            <Navigation />
-        </header>
+        <Navigation />
         <main>
             <div class="content-layer">
-                <header class="fluid-h1">
-                    <span class="name-tag">Luke D. Inglis</span>
-                </header>
+                <h1>{pageTitle}</h1>
+                <h2>... and my new Astro site!</h2>
 
-                <ul class="bio-tags" role="list">
-                    <li class="bio-tag">Software Engineer</li>
-                    <li class="bio-tag">Fullstack Developer</li>
-                    <li class="bio-tag">Accessibility Advocate</li>
-                    <li class="bio-tag">Nice Person</li>
-                </ul>
+                <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
 
-                <SocialLinks />                
+                <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
             </div>
         </main>
     </body>
